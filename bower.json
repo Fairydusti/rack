@@ -1,0 +1,27 @@
+{
+  "name": "rack",
+  "version": "1.0.0",
+  "authors": [
+    "Fairydusti <rantala.marko.j@student.uta.fi>"
+  ],
+  "description": "Personal website",
+  "main": "index.js",
+  "keywords": [
+    "Hire",
+    "Me",
+    "Personal",
+    "website"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "react": "~0.13.3"
+  }
+}
