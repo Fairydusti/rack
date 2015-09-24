@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.scss"],"names":[],"mappings":"AAGG,IAAI,CAAC,EAAE,CAAL;EACC,SAAS,EAJL,KAAK;EAKT,KAAK,EAJL,KAAK;CAEL","file":"main.css","sourcesContent":["$h1_size: '3em';\n$red: 'red';\nbody{\n   h1{\n      font-size: $h1_size;\n      color: $red;\n\n   }\n}"],"sourceRoot":"/source/"}
