@@ -1,9 +1,25 @@
 $h1_size: 5em;
-
+$matteblack: #1D1F1E;
 body{
-   h1{
-      font-size: $h1_size;
-      color: red;
-      text-decoration: underline;
+   width: 100%;
+   height: 100%;
+   background-color: $matteblack;
+   .contain-wrapper{
+      margin: 4em;
+      h1{ 
+         background-color: transparentize(white, 0.7);
+         padding: 0.7em;
+         text-align: center;
+         font-size: $h1_size;
+         font-family: helvetica;
+         color: $matteblack;
+         font-weight: 100;
+         text-decoration: underline;
+      }
+      p{
+         color: #fff;
+         font-family: Garamond;
+         font-weight: 100;
+      }
    }
 }
