@@ -7,9 +7,11 @@ $sky: #e9ffba;
 html{
    height: 100%;
    body{
-      min-width: 100%;
+      min-width: 100%; 
       min-height: 100%;
-      background-color: $sky;
+      background: grayscale(url('../vendor/images/jackets.jpg'),100%);
+      background-size: cover;
+      //background-color: $sky;
       margin: 0;
       .tab-menu{
            background-color: $matteblack;
@@ -17,26 +19,42 @@ html{
            width: 100%;
            top: 0em;
            ul{ 
+               text-align: center;
                li{
-                  //height: 2em;
-                  padding: 2em;
+                  padding: 1em 1.3em;
                   display: inline-block;
                   a{
                      color: $white;
                      text-transform: uppercase;
-                     size: 3em;
+                     font-size: 1em;
+                  }
+                  a:hover{
+                     color: darken($sky, 20%);
+                     text-decoration: none;
+                     
+                  }
+                  h3{
+                     font-size: 1.3em;
                   }
                }
                li:hover{
-                  background-color: lighten($matteblack, 10%);
-               }
-               li#fb-button{
-
+                 // background-color: lighten($matteblack, 10%);
+                 border-bottom: 2px darken($sky, 20%);
                }
             }
       }
       .contain-wrapper{
-         .intro-row{
+         #info{
+            display: none;
+         }
+         #cv{
+            display: none;
+         }
+         #portfolio{
+            display: none;
+
+         }
+         #intro-row{
             background-color: transparentize($white, 0.7);
             text-align: center;
             padding:1em;
