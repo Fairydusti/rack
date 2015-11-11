@@ -1,25 +1,106 @@
-$h1_size: 5em;
+$h1_size: 7em;
 $matteblack: #1D1F1E;
-body{
-   width: 100%;
+$gray: #4b4f4d;
+$white: #ffffff;
+$black: #000;
+$sky: #e9ffba;
+html{
    height: 100%;
-   background-color: $matteblack;
-   .contain-wrapper{
-      margin: 4em;
-      h1{ 
-         background-color: transparentize(white, 0.7);
-         padding: 0.7em;
-         text-align: center;
-         font-size: $h1_size;
-         font-family: helvetica;
-         color: $matteblack;
-         font-weight: 100;
-         text-decoration: underline;
+   body{
+      min-width: 100%;
+      min-height: 100%;
+      background-color: $sky;
+      margin: 0;
+      .tab-menu{
+           background-color: $matteblack;
+           
+           width: 100%;
+           top: 0em;
+           ul{ 
+               li{
+                  //height: 2em;
+                  padding: 2em;
+                  display: inline-block;
+                  a{
+                     color: $white;
+                     text-transform: uppercase;
+                     size: 3em;
+                  }
+               }
+               li:hover{
+                  background-color: lighten($matteblack, 10%);
+               }
+               li#fb-button{
+
+               }
+            }
       }
-      p{
-         color: #fff;
-         font-family: Garamond;
-         font-weight: 100;
+      .contain-wrapper{
+         .intro-row{
+            background-color: transparentize($white, 0.7);
+            text-align: center;
+            padding:1em;
+            border: $gray;
+            height: 4em;
+         }
+         .content-row{
+            .content-column{
+               background-color:transparentize($white, 0.2);
+               height: 250px !important;
+               margin: 1px;
+               height:50px; 
+            }
+         }
+         //margin: 4em;
+         h1{
+            //background-color: transparentize(white, 0.7);
+            padding: 0.7em;
+            text-align: center;
+            font-size: $h1_size;
+            font-family: helvetica;
+            color: $matteblack;
+            font-weight: 100;
+            font-variant: small-caps;
+            -webkit-animation-name: fading; //Chrome, Safari, Opera 
+            -webkit-animation-duration: 10s; // Chrome, Safari, Opera 
+            animation-name: fading;
+            animation-duration: 10s;
+            }
+    
+            // Chrome, Safari, Opera
+            @-webkit-keyframes fading {
+                0%   {color: transparentize($matteblack, 1);}
+                10%   {color: transparentize($matteblack, 0.9);}
+                20%   {color: transparentize($matteblack, 0.8);}
+                30%  {color: transparentize($matteblack, 0.7);}
+                40%  {color: transparentize($matteblack, 0.6);}
+                50%   {color: transparentize($matteblack, 0.5);}
+                60%   {color: transparentize($matteblack, 0.4);}
+                70%   {color: transparentize($matteblack, 0.3);}
+                80%   {color: transparentize($matteblack, 0.2);}
+                90%   {color: transparentize($matteblack, 0.1);}
+                100% {color: transparentize($matteblack, 0);}
+            }
+
+            //
+            @keyframes fading {
+                0%   {color: transparentize($matteblack, 1);}
+                10%   {color: transparentize($matteblack, 0.9);}
+                20%   {color: transparentize($matteblack, 0.8);}
+                30%  {color: transparentize($matteblack, 0.7);}
+                40%  {color: transparentize($matteblack, 0.6);}
+                50%   {color: transparentize($matteblack, 0.5);}
+                60%   {color: transparentize($matteblack, 0.4);}
+                70%   {color: transparentize($matteblack, 0.3);}
+                80%   {color: transparentize($matteblack, 0.2);}
+                90%   {color: transparentize($matteblack, 0.1);}
+                100% {color: transparentize($matteblack, 0);}
+            }
+         p{
+            color: #fff;
+            font-family: Garamond;
+            font-weight: 100;
+         }
       }
    }
 }

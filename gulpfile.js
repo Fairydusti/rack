@@ -4,10 +4,24 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var sassdoc = require('sassdoc');
 var react = require('gulp-react');
+var jsxTransform = require('gulp-jsx');
 var cache = require('gulp-cached');
+var livereload = require('gulp-livereload');
+var browserify = require('browserify');
+var reactify = require('reactify');
+//var reactTools = require('react-tools');
 
 gulp.task('default', ['sass','jsx-trans']);
+ // Jsx tranform thing
 
+ gulp.task('browserify', function(){
+  var b = browserify();
+  b.transform(reactify); // use the reactify transform
+  b.add('./rack/js/main.js');
+  return b.bundle()
+    .pipe(source('main.js'))
+    .pipe(gulp.dest('./rack/js/'));
+});
 
 
 //Sass compile
@@ -28,8 +42,7 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(sassOutput))
     .pipe(sassdoc())
-    // Release the pressure back and trigger flowing mode (drain)
-    // See: http://sassdoc.com/gulp/#drain-event
+
     .resume();
 });
 //Lint/cache js files (not implemented yet)
@@ -45,14 +58,16 @@ gulp.task('watch', function(){
 });
 
 //Set jsx-transform for react
-var jsxOutput = 'rack/js/';
-var jsxInput = 'rack/jsx/**/*.jsx';
+var jsxOutput = './rack/js/';
+var jsxInput = './rack/jsx/**/*.jsx';
 
 
 gulp.task('jsx-trans', function () {
     return gulp
       .src(jsxInput)
-        .pipe(react())
+        .pipe(jsxTransform({
+          factory: 'React.createClass'
+        }))
         .pipe(gulp.dest(jsxOutput))
         .resume();
 });
@@ -73,8 +88,15 @@ gulp.task('jsx-trans', function () {
 //             .on('end', cb);
 //     });
 // });
-
+// 
+//
 gulp.task('watch', function () {
    gulp.watch(sassInput, ['sass']);
-   gulp.watch(jsxInput, ['jsx-trans'])
+   gulp.watch(jsxInput, ['jsx-trans']);
+   gulp.watch('gulpfile.js', ['watch']);
+});
+
+gulp.task('livereload', function(){
+   livereload.listen();
+   livereload.reload('rack/index.html');
 });
