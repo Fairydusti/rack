@@ -3,63 +3,103 @@ $matteblack: #1D1F1E;
 $gray: #4b4f4d;
 $white: #ffffff;
 $black: #000;
-$sky: #e9ffba;
+$sky: #722f2f;//original-yellow#e9ffba;
 html{
    height: 100%;
    body{
       min-width: 100%; 
       min-height: 100%;
-      background: grayscale(url('../vendor/images/jackets.jpg'),100%);
+      background: url('../vendor/images/jackets.jpg')no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
       background-size: cover;
+
       //background-color: $sky;
       margin: 0;
       .tab-menu{
            background-color: $matteblack;
-           
+           position: fixed;
+           z-index: 5; 
+           // Menu, always on top
            width: 100%;
            top: 0em;
            ul{ 
-               text-align: center;
-               li{
-                  padding: 1em 1.3em;
-                  display: inline-block;
-                  a{
-                     color: $white;
-                     text-transform: uppercase;
-                     font-size: 1em;
-                  }
-                  a:hover{
-                     color: darken($sky, 20%);
-                     text-decoration: none;
-                     
-                  }
-                  h3{
-                     font-size: 1.3em;
-                  }
+                margin-bottom: 0px;
+                text-align: center;
+              li{
+                padding: 1em 1.3em;
+                display: inline-block;
+                border-bottom: 2px solid $matteblack;
+                a{
+                   color: $white;
+                   text-transform: uppercase;
+                   font-size: 1em;
+                }
+
+                h3{
+                   font-size: 1.3em;
+                }
                }
-               li:hover{
+              li:hover{
                  // background-color: lighten($matteblack, 10%);
-                 border-bottom: 2px darken($sky, 20%);
-               }
+                border-bottom: 2px solid lighten($sky, 20%);
+                cursor: pointer;
+                a{
+                  color: lighten($sky, 20%);
+                  text-decoration: none;
+                   
+                }
+              }
             }
       }
       .contain-wrapper{
-         #info{
-            display: none;
+        background-color: transparentize($sky, 0.4);
+        width: 100%;
+        margin-left: 0em;
+        margin-right: 0em;
+        #info{
+          margin-top: 20em;
+          background-color: transparentize($black, 0.3);
+            //display: none;
+            h1{
+              text-align: center;
+              color: $white;
+            }
          }
          #cv{
-            display: none;
+            margin-top: 20em;
+            width: 100%;
+          background-color: transparentize($white, 0.3);
+          h1{
+            text-align: center;
+            color: $black;
+          }
          }
          #portfolio{
-            display: none;
-
+            margin-top: 20em;
+            width: 100%;
+          background-color: transparentize($sky, 0.3);
+          h1{
+            text-align: center;
+            color: $black;
+          }
          }
-         #intro-row{
-            background-color: transparentize($white, 0.7);
+         #intro{
+            margin-top: 10em;
+            background-color: transparentize(darken($sky, 10%), 0.2);
             text-align: center;
             padding:1em;
             border: $gray;
-            height: 4em;
+            height: 10em;
+            width: 38.2%;
+            margin-left: -59.2vw;
+            height: 100%;
+            border: 1px solid $black;
+            border-radius: 5%;
+            #intro-text{
+              color: $black;
+            } 
          }
          .content-row{
             .content-column{
@@ -76,13 +116,13 @@ html{
             text-align: center;
             font-size: $h1_size;
             font-family: helvetica;
-            color: $matteblack;
+            //color: $matteblack;
             font-weight: 100;
             font-variant: small-caps;
-            -webkit-animation-name: fading; //Chrome, Safari, Opera 
-            -webkit-animation-duration: 10s; // Chrome, Safari, Opera 
-            animation-name: fading;
-            animation-duration: 10s;
+            //-webkit-animation-name: fading; //Chrome, Safari, Opera 
+            //-webkit-animation-duration: 10s; // Chrome, Safari, Opera 
+            //animation-name: fading;
+            //animation-duration: 10s;
             }
     
             // Chrome, Safari, Opera
