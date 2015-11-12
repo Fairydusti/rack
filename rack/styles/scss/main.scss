@@ -92,16 +92,26 @@ html{
             text-align: center;
             padding:1em;
             height: 10em;
-            width: 38.2%;
+            width: 46.97%;
             margin-left: -59.2vw;
             height: 100%;
             //border: 1px solid $black;
             //border-radius: 5%;
+            .portrait{
+               background-color: $matteblack;
+               border-radius:50%;
+               margin: 1em;
+               width: 250px;
+               height: 250px;
+               float: left;
+            }
             h2{
               color: #34c0ef;//$white;
               text-align: center;
             }
             #intro-text{
+              font-size: 1.2em;
+              font-weight: 100;
               text-align: justify;
               color: $white;
               a{
