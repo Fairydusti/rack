@@ -43,10 +43,12 @@ html{
                 }
                }
               li:hover{
-                 // background-color: lighten($matteblack, 10%);
+                //background-color: darken($matteblack, 5%);
+                transition: border-bottom 0.4s ease-out;
                 border-bottom: 2px solid lighten($sky, 20%);
                 cursor: pointer;
                 a{
+                  transition: color 0.4s ease;
                   color: lighten($sky, 20%);
                   text-decoration: none;
                    
