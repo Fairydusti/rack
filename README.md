@@ -1,5 +1,7 @@
 # rack
-This is my First Node.js project and trying to 
-get to know things better. 
+This is my personal project for my own website.
+-CV
+-Portfolio
+-Info
 
-Purpose of this project is to create personal websites
+Purpose of this project is also learn to use React.js (eventually).
