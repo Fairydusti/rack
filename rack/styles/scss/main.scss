@@ -7,9 +7,9 @@ $sky: #722f2f;//original-yellow#e9ffba;
 html{
    height: 100%;
    body{
-      min-width: 100%; 
+      min-width: 100%;
       min-height: 100%;
-      background: url('../vendor/images/jackets.jpg')no-repeat center center fixed; 
+      background: url('../vendor/images/jackets.jpg')no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -20,11 +20,11 @@ html{
       .tab-menu{
            background-color: $matteblack;
            position: fixed;
-           z-index: 5; 
+           z-index: 5;
            // Menu, always on top
            width: 100%;
            top: 0em;
-           ul{ 
+           ul{
                 margin-bottom: 0px;
                 text-align: center;
               li{
@@ -51,7 +51,7 @@ html{
                   transition: color 0.4s ease;
                   color: lighten($sky, 20%);
                   text-decoration: none;
-                   
+
                 }
               }
             }
@@ -63,10 +63,11 @@ html{
         margin-right: 0em;
         #info{
           margin-top: 20em;
-          background-color: transparentize($black, 0.3);
+          background-color: $black;
+          text-align: right;
             //display: none;
             h1{
-              text-align: center;
+              text-align: right;
               color: $white;
             }
          }
@@ -75,7 +76,7 @@ html{
             width: 100%;
           background-color: transparentize($white, 0.3);
           h1{
-            text-align: center;
+            text-align: left;
             color: $black;
           }
          }
@@ -106,6 +107,7 @@ html{
                width: 250px;
                height: 250px;
                float: left;
+               transform: rotate(360deg);
             }
             h2{
               color: #34c0ef;//$white;
@@ -120,14 +122,14 @@ html{
                 font-weight:bolder;
                 color: #34c0ef;
               }
-            } 
+            }
          }
          .content-row{
             .content-column{
                background-color:transparentize($white, 0.2);
                height: 250px !important;
                margin: 1px;
-               height:50px; 
+               height:50px;
             }
          }
          //margin: 4em;
@@ -140,12 +142,12 @@ html{
             //color: $matteblack;
             font-weight: 100;
             font-variant: small-caps;
-            //-webkit-animation-name: fading; //Chrome, Safari, Opera 
-            //-webkit-animation-duration: 10s; // Chrome, Safari, Opera 
+            //-webkit-animation-name: fading; //Chrome, Safari, Opera
+            //-webkit-animation-duration: 10s; // Chrome, Safari, Opera
             //animation-name: fading;
             //animation-duration: 10s;
             }
-    
+
             // Chrome, Safari, Opera
             @-webkit-keyframes fading {
                 0%   {color: transparentize($matteblack, 1);}

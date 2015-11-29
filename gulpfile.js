@@ -72,7 +72,6 @@ gulp.task('jsx-trans', function () {
         .resume();
 });
 
-
 //Creating gulp watch
 
 // gulp.task('stream', function () {
@@ -80,7 +79,7 @@ gulp.task('jsx-trans', function () {
 //         .pipe(watch('css/**/*.css'))
 //         .pipe(gulp.dest('build'));
 // });
- 
+
 // gulp.task('callback', function (cb) {
 //     watch('css/**/*.css', function () {
 //         gulp.src('css/**/*.css')
@@ -88,7 +87,7 @@ gulp.task('jsx-trans', function () {
 //             .on('end', cb);
 //     });
 // });
-// 
+//
 //
 gulp.task('watch', function () {
    gulp.watch(sassInput, ['sass']);
