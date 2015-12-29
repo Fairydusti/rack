@@ -113,10 +113,12 @@ html{
             }
           }
           #cv-skills{
+            padding:2em 0em;
             h2{
               text-transform: uppercase !important;
               font-family: $raleway;
               color: $white;
+              padding-bottom: 1em;
               span{
                 color:lighten($sky, 20%);
                 background-color:$matteblack;
@@ -125,6 +127,19 @@ html{
             #skill-chart{
               svg{
                // width: 40px;
+               rect{
+                  cursor: pointer;
+               }
+               text{cursor: pointer;}
+              }
+              #skill-java{
+                cursor: pointer;
+              }
+            }
+            #skill-info{
+              margin-left: 3em;
+              #skill-info_field{
+                //text-align: left;
               }
             }
           }

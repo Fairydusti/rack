@@ -19,6 +19,32 @@ $('a[href*=#]:not([href=#])').click(function() {
       }
    }
 });
+$(document).ready(function() {
+  $('.skill-element').click(function(event) {
+    var infofield = "#skill-info_field";
+    
+    var elementsId = $(this).attr('id');
+    console.log(elementsId);
+    var result="";
+    if(elementsId == "skill-java"){
+      //window.alert("Keijo2");
+      result = "g: how to java";
+    }
+    else if(elementsId =="skill-js"){
+      result = "Familiar with Bootstrap framework. jQuery and vanilla is very familiar and currently trying to get know better React.js.";
+    }
+    else if(elementsId =="skill-html"){
+      result = "Familiar with Bootstrap framework. Strong understanding of HTML-elements";
+    }
+    else if(elementsId =="skill-scss"){
+      result = "Familiar with Sass-preprocessing language and currently using it. Trying to get know better mixins.";
+    }
+    else{
+      result = "Coming soon";
+    }
+    $(infofield).text(result);
+  });
+});
 //});
 
 
