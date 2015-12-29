@@ -92,6 +92,20 @@ html{
           .cv{
             margin-top: 5em;
             float: right;
+            h4{
+              text-transform: uppercase !important;
+              font-family: $raleway;
+              color: $white;
+              strong{
+                color:lighten($sky, 20%);
+                background-color:$matteblack;
+              }
+            }
+            li{
+              color: $white;
+              font-family: $raleway;
+              list-style-type: none;
+            }
           }
          }
          #portfolio{
@@ -101,10 +115,7 @@ html{
           h1{
             text-align: center;
             color: $black;
-          }
-          .cv{
-            padding-top: 3em;
-          }
+          } 
          }
          #intro{
             margin-top: 2em;
@@ -136,7 +147,7 @@ html{
             }
             #intro-text{
               padding: 1em 15em 2em 15em;
-              font-size: 1em;
+              font-size: 1.2em;
               font-weight: 100;
               text-align: justify;
               color: $sky;
@@ -149,9 +160,9 @@ html{
          .content-row{
             .content-column{
                background-color:transparentize($white, 0.2);
-               height: 250px !important;
+               //height: 250px !important;
                margin: 1px;
-               height:50px;
+               //height:50px;
             }
          }
          //margin: 4em;
