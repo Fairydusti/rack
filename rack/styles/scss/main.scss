@@ -83,20 +83,21 @@ html{
          }
          #cv{
           margin-top: 5em;
+          padding-bottom: 2em;
           width: 100%;
           background-color: $matteblack;//transparentize($white, 0.3);
           h1{
             text-align: left;
             color: lighten($sky, 20%);
           }
-          .cv{
+          .cv-list{
             margin-top: 5em;
             float: right;
             h4{
               text-transform: uppercase !important;
               font-family: $raleway;
               color: $white;
-              strong{
+              span{
                 color:lighten($sky, 20%);
                 background-color:$matteblack;
               }
@@ -105,6 +106,26 @@ html{
               color: $white;
               font-family: $raleway;
               list-style-type: none;
+              span{
+                //color:lighten($sky, 40%);
+                font-weight: bolder;
+              }
+            }
+          }
+          #cv-skills{
+            h2{
+              text-transform: uppercase !important;
+              font-family: $raleway;
+              color: $white;
+              span{
+                color:lighten($sky, 20%);
+                background-color:$matteblack;
+              }
+            }
+            #skill-chart{
+              svg{
+               // width: 40px;
+              }
             }
           }
          }
