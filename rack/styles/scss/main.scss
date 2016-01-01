@@ -1,6 +1,7 @@
 @import "fonts";
 $josefin: "Josefin sans";
 $raleway: "Raleway";
+$archD: "Architects Daughter";
 $h1_size: 7em;
 $matteblack: #1D1F1E;
 $gray: #4b4f4d;
@@ -89,6 +90,8 @@ html{
           h1{
             text-align: left;
             color: lighten($sky, 20%);
+            font-family: $josefin, sans-serif;
+            font-weight: 100;
           }
           .cv-list{
             margin-top: 5em;
@@ -96,6 +99,7 @@ html{
             h4{
               text-transform: uppercase !important;
               font-family: $raleway;
+              font-weight: 100;
               color: $white;
               span{
                 color:lighten($sky, 20%);
@@ -107,8 +111,16 @@ html{
               font-family: $raleway;
               list-style-type: none;
               span{
-                //color:lighten($sky, 40%);
                 font-weight: bolder;
+              }
+              a span{
+                color:lighten($sky, 20%);
+              }
+              a:hover span{
+                text-decoration: underline;
+                -webkit-text-decoration-color: lighten($sky, 20%);
+                -moz-text-decoration-color: lighten($sky, 20%);  /* vendor prefix not required as of V36 */
+                text-decoration-color: lighten($sky, 20%);
               }
             }
           }
@@ -116,7 +128,8 @@ html{
             padding:2em 0em;
             h2{
               text-transform: uppercase !important;
-              font-family: $raleway;
+              font-family: $raleway, sans-serif;
+              font-weight: 100;
               color: $white;
               padding-bottom: 1em;
               span{
@@ -125,12 +138,28 @@ html{
               }
             }
             #skill-chart{
+              svg#skill-scale{
+                
+                text{
+                  cursor: default;
+                }
+                pointer-events: all !important;
+              }
               svg{
+                pointer-events: all !important;
+
                // width: 40px;
-               rect{
+                rect{
                   cursor: pointer;
-               }
-               text{cursor: pointer;}
+                }
+                .skill-rect:hover{
+                  opacity: 0.5;  
+                  pointer-events: all !important;
+                }
+                text{
+                  cursor: pointer;
+                  font-family: $raleway, sans-serif;
+                }
               }
               #skill-java{
                 cursor: pointer;
@@ -145,13 +174,49 @@ html{
           }
          }
          #portfolio{
-            margin-top: 20em;
+            margin-top: 1em;
+            margin-bottom: 3em;
             width: 100%;
-            background-color: transparentize($sky, 0.3);
+            background-color: $white;
           h1{
             text-align: center;
             color: $black;
+            font-family: $josefin, sans-serif;
           } 
+         .p-o-1{
+             transform: rotate(350deg);
+             text-align: center;
+             font-family: $archD;
+             text-transform: uppercase;
+          }
+          #portfolio-content{
+            padding-left:5em;
+            .portfolio-thumbnail{
+              height: 250px;
+              width: 220px;
+              position:relative;
+              border-top: 8px solid $white;
+              border-left: 8px solid $white;
+              border-right: 8px solid $white;
+              border-bottom: 40px solid $white;
+              margin: 20px;
+              outline:1px solid $matteblack;
+              box-shadow: 5px 5px 2px #888888;
+              cursor: pointer;
+            }
+            .portfolio-thumbnail.p-o-2{
+              transform: rotate(15deg);
+            }
+            .portfolio-thumbnail.p-o-3{
+              transform: rotate(5deg);
+            }
+            .portfolio-thumbnail:hover{
+              outline: 1px solid lighten($matteblack, 20%);
+            }
+          }
+          #project-description{
+            color:$matteblack;
+          }
          }
          #intro{
             margin-top: 2em;
@@ -248,7 +313,7 @@ html{
             }
          p{
             color: #fff;
-            font-family: $raleway;
+            font-family: $raleway, sans-serif;
             font-weight: 100;
          }
       }

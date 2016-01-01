@@ -44,6 +44,15 @@ $(document).ready(function() {
     }
     $(infofield).text(result);
   });
+  $('.portfolio-polaroid')       
+        .mouseover(function() { 
+            var src = $(this).children('img').attr("src").match(/[^\.]+/) + "-thumb.png";
+            $(this).attr("src", src);
+        })
+        .mouseout(function() {
+            var src = $(this).attr("src").replace("-thumb.png", ".png");
+            $(this).attr("src", src);
+        });
 });
 //});
 
