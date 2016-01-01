@@ -68,20 +68,36 @@ html{
         margin-left: 0em;
         margin-right: 0em;
         padding: 0em;
-        img{
+        #intro-pic{
           width:100%;
           height:90%;
         }
         #info{
-          margin-top: 20em;
-          background-color: $black;
-          text-align: right;
+          //margin-top: 20em;
+          background-color: $white;
+          //text-align: right;
             //display: none;
             h1{
               text-align: right;
-              color: $white;
+              font-family: $josefin, sans-serif;
+              text-align: right;
+              color: $matteblack;
+              font-weight: 100;
             }
-         }
+          .tech-badge{
+              -webkit-filter: grayscale(100%);
+              -moz-filter: grayscale(100%);
+              filter: grayscale(100%);
+          }
+          .tech-badge:hover{
+            -webkit-filter: grayscale(70%);
+            -moz-filter: grayscale(70%);
+            filter: grayscale(70%);
+          }
+          .opacity-badge{
+            opacity(20%);
+          }
+        }
          #cv{
           margin-top: 5em;
           padding-bottom: 2em;
@@ -275,7 +291,7 @@ html{
             font-family: helvetica;
             //color: $matteblack;
             font-weight: 100;
-            font-variant: small-caps;
+            text-transform: uppercase;
             //-webkit-animation-name: fading; //Chrome, Safari, Opera
             //-webkit-animation-duration: 10s; // Chrome, Safari, Opera
             //animation-name: fading;
