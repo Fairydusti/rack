@@ -1,4 +1,5 @@
 @import "fonts";
+@import "projects";
 
 $josefin: "Josefin sans", sans-serif;
 $raleway: "Raleway";
@@ -11,6 +12,7 @@ $matteblack: #1D1F1E;
 $gray: #4b4f4d;
 $white: #ffffff;
 $black: #000;
+$inc-blue: #4D5A6A;
 $sky: #E0052B;//tile#722f2f;//original-yellow#e9ffba;
 html{
    height: 100%;
@@ -161,6 +163,17 @@ html{
                 -moz-text-decoration-color: lighten($sky, 20%);  /* vendor prefix not required as of V36 */
                 text-decoration-color: lighten($sky, 20%);
               }
+              a{
+                span.more-info_portfolio{
+                  color: $inc-blue;
+                  font-style: italic;
+                  text-decoration: none;
+                  font-weight: 100;
+                }
+                span.more-info_portfolio:hover{
+                  text-decoration-color: $inc-blue;
+                }
+              }
             }
           }
           #cv-skills{
@@ -208,6 +221,8 @@ html{
               margin-left: 3em;
               #skill-info_field{
                 //text-align: left;
+                color: #4D5A6A;
+                font-style: italic;
               }
             }
           }
@@ -361,7 +376,7 @@ html{
 .highlight-word{
   color: darken($lightgray, 15%) !important;//lighten($sky, 20%) !important;
   font-family: $raleway, sans-serif;
-  font-weight: 300;
+  font-weight: 100;
 }
 h5.highlight-word{
 
