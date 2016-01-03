@@ -225,21 +225,25 @@ html{
           #portfolio-content{
             padding-left:5em;
             .project-row{
-               background: linear-gradient($lightgray, $white 20%, $white);
-               background: -moz-linear-gradient($lightgray, $white 20%, $white);
-               background: -webkit-linear-gradient($lightgray, $white 20%, $white);
+               background: linear-gradient(right, $lightgray, $white 70%, $white);
+               background: -moz-linear-gradient(right, $lightgray, $white 70%, $white);
+               background: -webkit-linear-gradient(right, $lightgray, $white 80%, $white);
                 margin: 2em;
                 padding: 0.4em;
-                border: 1px solid darken($lightgray, 5%);
-                border-radius: 8px;
-                box-shadow: 5px 5px 2px darken($lightgray, 5%);
+                //border: 1px solid darken($lightgray, 15%);
+                //border-left: 0px;
+                //border-radius: 8px;
+                box-shadow: inset 0px 0px 36px 0px darken($lightgray, 10%);
               .project-description{
                 padding: 2em;
 
-                ul{
-                  li{
-                    list-style: circle outside none;
-                  }
+                h5{
+                  text-transform: uppercase;
+                  font-weight: 300;
+                  color: lighten($sky, 40%)
+                }
+                h3{
+                  font-size: 2em;
                 }
                 .weto-header{
                   font-family: $weto-font, serif;
@@ -253,13 +257,18 @@ html{
                   color: $matteblack;
                 }
                 .project-link_explore{
-                  color: lighten($sky, 20%);
+                  margin-top: 2em;
+                 a{
+                    color: lighten($sky, 20%);
+                    font-weight: 300;
+                  }
                 }
               }
               .portfolio-element.col-md-7{
+                padding: 0.5em 0em;
                 .portfolio-thumbnail{
                   //border-left: 1px solid lighten($lightgray, 5%);
-                  padding-left: 0.5em;
+                  padding: 0.5em;
                   float: right;
                   //border-top: 1px solid gray;
                   //border-left: 1px solid gray;
@@ -348,4 +357,12 @@ html{
          }
       }
    }
+}
+.highlight-word{
+  color: darken($lightgray, 15%) !important;//lighten($sky, 20%) !important;
+  font-family: $raleway, sans-serif;
+  font-weight: 300;
+}
+h5.highlight-word{
+
 }
