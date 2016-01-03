@@ -31,7 +31,7 @@ $(document).ready(function() {
       result = "g: how to java";
     }
     else if(elementsId =="skill-js"){
-      result = "Familiar with Bootstrap framework. jQuery and vanilla is very familiar and currently trying to get know better React.js.";
+      result = "Familiar with Bootstrap framework. jQuery is the strongest library. VanillaJS is also one of my strengths, because Java background. Currently trying to get know better ReactJS and NodeJS.";
     }
     else if(elementsId =="skill-html"){
       result = "Familiar with Bootstrap framework. Strong understanding of HTML-elements";
