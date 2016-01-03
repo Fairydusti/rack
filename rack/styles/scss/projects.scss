@@ -1,0 +1,32 @@
+@import 'fonts';
+$weto-logo: "Arapey", serif;
+$gldr: 1.618;
+$base: 100%;
+$inc:#4D5A6A;
+a{
+   text-decoration: none;
+}
+#projectcontent-wrapper{
+   width: $base;
+   height: $base;
+   margin-top: 3em;
+   margin-left: 0;
+   h1{
+      padding: 1em;
+      text-align: center; 
+      font-size: 6em;
+      font-family: $weto-logo !important;
+   }
+   .project-info_row{
+      margin-left: 5em;
+      margin-right: 5em;
+      padding-left: 10em;
+      padding-right: 10em;
+      p{
+         font-family: Garamond;
+         font-size: 1.4em;
+         color: $inc;
+         text-align: justify;
+      }
+   }
+}
