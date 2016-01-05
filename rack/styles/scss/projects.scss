@@ -1,8 +1,14 @@
 @import 'fonts';
 $weto-logo: "Arapey", serif;
 $gldr: 1.618;
+$raleway: 'Josefin', sans-serif;
 $base: 100%;
 $inc:#4D5A6A;
+$fontsize: 1.4em;
+$matteblack: #1D1F1E;
+
+$white: #ffffff;
+
 a{
    text-decoration: none;
 }
@@ -13,6 +19,7 @@ a{
    margin-left: 0;
    h1{
       padding: 1em;
+      padding-bottom:0.2em;
       text-align: center; 
       font-size: 6em;
       font-family: $weto-logo !important;
@@ -22,11 +29,47 @@ a{
       margin-right: 5em;
       padding-left: 10em;
       padding-right: 10em;
+      margin-bottom: 5em;
+      .prolog-row{
+         padding-left: 1.2em;
+         padding-right: 1.2em;
+
+         font-size:$fontsize / ($gldr/2);
+         font-weight: 100; 
+         font-style: normal;
+         text-align: center;
+
+      }
+      .prolog-row.prolog-row_description{
+         font-size: $fontsize*0.9;
+         text-align: center;
+         font-style: italic;
+         color: lighten($inc, 40%);
+      }
+   }
+   .project-plaintext{
+      margin: 3em;
+      padding-left: 12em;
+      padding-right: 12em; 
       p{
-         font-family: Garamond;
-         font-size: 1.4em;
+         font-family: Garamond, serif;
+         font-size: $fontsize;
          color: $inc;
          text-align: justify;
       }
+      .image-text{
+         text-align: center;
+         font-style: italic;
+         padding: 0.2em;
+         font-size: 1.1em;
+         font-weight: 300;
+         font-family: $raleway;
+         margin-bottom: 3em;
+      }
+   }
+
+   #weto-project-pic{
+      width:100%;
    }
 }
+

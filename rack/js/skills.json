@@ -1,0 +1,14 @@
+"skills":[
+    {"skillId":"skill-html", "description":"Can html"}, 
+    {"skillId":"skill-scss", "description":"Can html"}, 
+    {"skillId":"skill-javascript","description":"Familiar with Bootstrap framework, jQuery
+    vanilla and currently trying to get know better React.js."},
+    {"skillId":"skill-php", "description":"Can html"}, 
+    {"skillId":"skill-java", "description":"Can html"}, 
+    {"skillId":"skill-cpp","description":"Can html"},
+    {"skillId":"skill-c", "description":"Can html"}, 
+    {"skillId":"skill-psql", "description":"Can html"}, 
+    {"skillId":"skill-msql","description":"Can html"},
+    {"skillId":"skill-xml", "description":"Can html"}, 
+    {"skillId":"skill-json", "description":"Can html"} 
+]
