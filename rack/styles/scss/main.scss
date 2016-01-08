@@ -142,6 +142,7 @@ html{
               text-align: right;
               color: $matteblack;
             }
+            color: $matteblack;
             text-align: center;
             .info-content{
               margin-top: 2em;
@@ -151,7 +152,7 @@ html{
                 font-weight: 100;
               }
               p{
-                color:$matteblack;
+                color:$matteblack !important;
                 text-align: justify;
               }
             }
@@ -211,6 +212,15 @@ html{
                 img{
                   margin-left: 1em;
                   margin-top: 1em;
+                }
+                img:hover{
+                  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'old-timey\'><feColorMatrix type=\'matrix\' values=\'0.14 0.45 0.05 0 0 0.12 0.39 0.04 0 0 0.08 0.28 0.03 0 0 0 0 0 1 0\'/></filter></svg>#old-timey");
+                  -webkit-filter: sepia(1);
+                  -webkit-filter: sepia(100%);
+                  -moz-filter: sepia(100%);
+                  -ms-filter: sepia(100%);
+                  -o-filter: sepia(100%);
+                  filter: sepia(100%);
                 }
               }
             }
@@ -328,17 +338,16 @@ html{
                   //border-left: 1px solid gray;
                   height: 50%;
                   width: 90%;
-                  cursor: pointer;
                 }
                 .portfolio-thumbnail:hover{
-
-                }
-                .portfolio-thumbnail.p-o-2{
-                  //transform: rotate(15deg);
-                }
-                .portfolio-thumbnail.p-o-3{
-                  //transform: rotate(5deg);
-                }
+                    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'old-timey\'><feColorMatrix type=\'matrix\' values=\'0.14 0.45 0.05 0 0 0.12 0.39 0.04 0 0 0.08 0.28 0.03 0 0 0 0 0 1 0\'/></filter></svg>#old-timey");
+                    -webkit-filter: sepia(0.5);
+                    -webkit-filter: sepia(50%);
+                    -moz-filter: sepia(50%);
+                    -ms-filter: sepia(50%);
+                    -o-filter: sepia(50%);
+                    filter: sepia(50%);
+                  }
               }
               // .portfolio-element.col-sm-6{
               //   .portfolio-thumbnail{
