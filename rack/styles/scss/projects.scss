@@ -1,11 +1,13 @@
 @import 'fonts';
 $weto-logo: "Arapey", serif;
 $gldr: 1.618;
-$raleway: 'Josefin', sans-serif;
+$josefin: 'Josefin', sans-serif;
+$h3-font: "Share", cursive;
 $base: 100%;
 $inc:#4D5A6A;
-$fontsize: 1.4em;
+$fontsize: 1.6em;
 $matteblack: #1D1F1E;
+$crimson: "Crimson", serif;
 
 $white: #ffffff;
 
@@ -49,13 +51,22 @@ a{
    }
    .project-plaintext{
       margin: 3em;
-      padding-left: 12em;
-      padding-right: 12em; 
-      p{
-         font-family: Garamond, serif;
-         font-size: $fontsize;
+      padding-left: 15em;
+      padding-right: 15em; 
+      h3{
+         margin-left: 1.1em;
+         font-family: $h3-font;
+         font-weight: bold;
+         text-transform: uppercase;
+      }
+      .plain-text{
+         margin:1.5em;
+         font-family: $crimson;
+         font-size: 1.4em;
          color: $inc;
          text-align: justify;
+         font-weight: 300;
+         line-height: 200%;
       }
       .image-text{
          text-align: center;
@@ -63,7 +74,7 @@ a{
          padding: 0.2em;
          font-size: 1.1em;
          font-weight: 300;
-         font-family: $raleway;
+         font-family: $josefin;
          margin-bottom: 3em;
       }
    }
